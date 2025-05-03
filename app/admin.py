@@ -1,3 +1,7 @@
 from django.contrib import admin
+from .models import Ramais
 
-# Register your models here.
+
+@admin.register(Ramais)
+class RamaisAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'ramal', 'setor', 'maquina')
